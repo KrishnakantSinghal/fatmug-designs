@@ -31,8 +31,6 @@ class VenderAPIView(generics.GenericAPIView):
 
     def get(self, request, vendor_id=None):
         try:
-            serializer_class = self.get_serializer_class()
-            vendor_id = self.kwargs.get("vendor_id", None)
             if vendor_id:
                 vendors = Vendor.objects.get(id=vendor_id)
                 serializer_class = self.get_serializer_class()
