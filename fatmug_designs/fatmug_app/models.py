@@ -23,15 +23,23 @@ class Vendor(models.Model):
 class PurchaseOrder(models.Model):
     po_number = models.CharField(max_length=100, help_text="Unique number identifying the PO.")
     vendor = models.ForeignKey(Vendor, on_delete=models.CASCADE)
-    order_date = models.DateTimeField(auto_now_add=True, help_text="Date when the order was placed.")
+    order_date = models.DateTimeField(help_text="Date when the order was placed.")
     delivery_date = models.DateTimeField(help_text="Expected or actual delivery date of the order.")
     items = models.JSONField(default=dict, help_text="Details of items ordered.")
     quantity = models.IntegerField(default=0, help_text="Total quantity of items in the PO.")
     status = models.CharField(max_length=20, help_text="Current status of the PO (e.g., pending, completed, canceled).")
     quality_rating = models.FloatField(null=True, help_text="Rating given to the vendor for this PO.")
     issue_date = models.DateTimeField(auto_now_add=True, help_text="Timestamp when the PO was issued to the vendor.")
-    acknowledgment_date = models.DateTimeField(null=True, help_text="Timestamp when the vendor acknowledged the PO.")
+    acknowledgment_date = models.DateTimeField(null=True, blank=True, help_text="Timestamp when the vendor acknowledged the PO.")
     
+    def save(self, *args, **kwargs):
+        self.po_number = str(uuid.uuid4().int % 10**6).zfill(6)
+        self.quantity = sum(item["quantity"] for item in self.items)
+        super().save(*args, **kwargs)
+    
+    def __str__(self):
+        return self.vendor.name + " -> " +self.po_number
+
 
 class HistoricalPerformance(models.Model):
     vender = models.ForeignKey(Vendor, on_delete=models.CASCADE)

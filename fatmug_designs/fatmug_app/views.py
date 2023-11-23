@@ -74,3 +74,31 @@ class VenderAPIView(generics.GenericAPIView):
             return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
         
     
+class PurchaseOrderView(generics.ListAPIView):
+    serializer_class = PurchaseOrderSerializer
+    permission_classes = [AllowAny]
+    
+    def post(self, request, *args, **kwargs):
+        try:
+            serializer = self.serializer_class(data=request.data, partial=True)
+            if serializer.is_valid(raise_exception=True):
+                serializer.save()
+                return Response({"message": "Purchase Order Created Successfully"})
+
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    
+    def get_queryset(self):
+        vendor_id = self.request.GET.get("vendor_id", None)
+        purchase_order_id = self.kwargs.get("po_id", None)
+        if vendor_id:
+            purchase_orders = PurchaseOrder.objects.filter(vendor_id=vendor_id)
+            return purchase_orders
+        
+        if purchase_order_id:
+            purchase_orders = PurchaseOrder.objects.filter(id=purchase_order_id)
+            return purchase_orders
+        
+        purchase_orders = PurchaseOrder.objects.all()
+        return purchase_orders
+        
