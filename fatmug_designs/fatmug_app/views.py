@@ -3,8 +3,9 @@ from rest_framework import status
 from .serializers import *
 from rest_framework.permissions import IsAdminUser, AllowAny
 from rest_framework.response import Response
-from .models import *
-
+from .models import *    
+        
+    
 # Create your views here.
 class VenderAPIView(generics.GenericAPIView):
     serializer_class = VendorSerializer
@@ -101,4 +102,27 @@ class PurchaseOrderView(generics.ListAPIView):
         
         purchase_orders = PurchaseOrder.objects.all()
         return purchase_orders
+        
+    def put(self, request, *args, **kwargs):
+        try:
+            data = request.data
+            po_id = kwargs.get("po_id")
+            purchase_order = PurchaseOrder.objects.get(id=po_id)
+            serializer = self.serializer_class(data=request.data, instance = purchase_order, partial=True)
+            if serializer.is_valid(raise_exception=True):
+                serializer.save()
+                return Response({"message": "Purchase Order Updated Successfully"}, status=status.HTTP_200_OK)
+        
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        
+    
+    def delete(self, request, po_id = None):
+        try:
+            purchase_order = PurchaseOrder.objects.get(id = po_id)
+            purchase_order.delete()
+            return Response({"message": "Purchase Order Successfully Deleted"}, status=status.HTTP_204_NO_CONTENT)
+        
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)    
         

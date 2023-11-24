@@ -1,5 +1,4 @@
 from django.db import models
-import uuid
 
 # Create your models here.
 class Vendor(models.Model):
@@ -9,15 +8,12 @@ class Vendor(models.Model):
     vendor_code = models.CharField(max_length=6, help_text="A unique identifier for the vendor.")
     on_time_delivery_rate = models.FloatField(help_text="Tracks the percentage of on-time deliveries.", default=0)
     quality_rating_avg = models.FloatField(help_text="Average rating of quality based on purchase orders.", default=0)
-    average_response_time = models.FloatField(help_text="Average time taken to acknowledge purchase orders.", default=0)
+    average_response_time = models.FloatField(help_text="Average time taken to acknowledge purchase orders (days).", default=0)
     fulfillment_rate = models.FloatField(help_text="Percentage of purchase orders fulfilled successfully.", default=0)
     
     def __str__(self):
         return self.name
     
-    def save(self, *args, **kwargs):
-        self.vendor_code = str(uuid.uuid4().int % 10**6).zfill(6)   
-        super().save(*args, **kwargs)
 
 
 class PurchaseOrder(models.Model):
@@ -33,7 +29,6 @@ class PurchaseOrder(models.Model):
     acknowledgment_date = models.DateTimeField(null=True, blank=True, help_text="Timestamp when the vendor acknowledged the PO.")
     
     def save(self, *args, **kwargs):
-        self.po_number = str(uuid.uuid4().int % 10**6).zfill(6)
         self.quantity = sum(item["quantity"] for item in self.items)
         super().save(*args, **kwargs)
     
