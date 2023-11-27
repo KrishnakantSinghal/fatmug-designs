@@ -3,8 +3,30 @@ from rest_framework import status
 from .serializers import *
 from rest_framework.permissions import IsAdminUser, AllowAny
 from rest_framework.response import Response
-from .models import *    
-        
+from .models import *
+from django.contrib.auth import authenticate
+
+
+class AdminTokensView(generics.GenericAPIView):
+    serializer_class = UserSerializer
+    permission_classes = [AllowAny]
+    
+    def post(self, request, format=None):
+        email = request.data.get('email')
+        password = request.data.get('password')
+        user = authenticate(email=email, password=password)
+        if user:
+            token = CustomTokenObtainPairSerializer.get_token(user)
+            response_dict = {
+                'token': token,
+                'msg': 'Admin login Success'
+            }
+            return Response({"code": 200, "data":response_dict}, status=status.HTTP_200_OK)
+        else:
+            return Response({"code": 404, 'errors': 'Email or Password is not Valid'},
+                        status=status.HTTP_404_NOT_FOUND)
+
+
     
 # Create your views here.
 class VenderAPIView(generics.GenericAPIView):
@@ -126,3 +148,47 @@ class PurchaseOrderView(generics.ListAPIView):
         except Exception as e:
             return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)    
         
+
+class PerformanceMetricsView(generics.GenericAPIView):
+    serializer_class = VendorSerializer
+    permission_classes = [AllowAny]
+    
+    def get_serializer_class(self):
+        class PurchaseMetricsSerializer(self.serializer_class):
+            class Meta:
+                model = self.serializer_class.Meta.model
+                fields = ["on_time_delivery_rate", "quality_rating_avg", "average_response_time", "fulfillment_rate"]
+        return PurchaseMetricsSerializer
+    
+    def get(self, request, *args, **kwargs):
+        try:
+            vendor_id = kwargs.get("vendor_id")
+            vendor = Vendor.objects.get(id=vendor_id)
+            serializer_class = self.get_serializer_class()
+            serializer = serializer_class(vendor)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)    
+
+
+class AcknowledgePOView(generics.GenericAPIView):
+    serializer_class = PurchaseOrderSerializer
+    permission_classes = [AllowAny]
+    
+    def post(self, request, *args, **kwargs):
+        try:
+            po_id = kwargs.get("po_id")
+            purchase_order = PurchaseOrder.objects.get(id=po_id)
+            purchase_order.acknowledgment_date = timezone.now()
+            if not purchase_order.status == "complete":
+                purchase_order.status == "complete"
+                purchase_order.save()
+                create_performance_matrics(purchase_order.vendor)
+                return Response({"message": "Acknowledgement updated successfully"}, status=status.HTTP_200_OK)
+
+            return Response({"error": "This Purchase Order is already acknowledged"}, status=status.HTTP_400_BAD_REQUEST)
+            
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    

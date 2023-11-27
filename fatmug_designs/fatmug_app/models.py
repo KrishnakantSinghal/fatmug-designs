@@ -46,3 +46,4 @@ class HistoricalPerformance(models.Model):
     
     def __str__(self):
         return self.vendor.name + " -> " + str(self.date)
+    

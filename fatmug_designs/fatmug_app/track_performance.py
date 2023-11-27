@@ -2,6 +2,8 @@ from .models import *
 from django.db.models import Avg, ExpressionWrapper, F, fields
 from django.utils import timezone
 
+    
+
 def create_performance_matrics(vendor):
     purchase_orders = PurchaseOrder.objects.filter(vendor_id = vendor.id)
     completed_orders = purchase_orders.filter(status="complete")
