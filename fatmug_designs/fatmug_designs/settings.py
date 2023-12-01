@@ -136,19 +136,38 @@ REST_FRAMEWORK = {
 }
 
 
+# Configure settings for the Django Simple JWT library.
 SIMPLE_JWT = {
+    # Set the lifetime of the access token to 1 day.
     'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
+
+    # Set the lifetime of the refresh token to 2 days.
     'REFRESH_TOKEN_LIFETIME': timedelta(days=2),
 
+    # Specify the accepted authentication header types.
     'AUTH_HEADER_TYPES': ('Bearer',),
+
+    # Specify the name of the HTTP authorization header.
     'AUTH_HEADER_NAME': 'HTTP_AUTHORIZATION',
+
+    # Specify the user ID field used in the authentication process.
     'USER_ID_FIELD': 'id',
+
+    # Specify the claim used to store the user ID.
     'USER_ID_CLAIM': 'user_id',
+
+    # Specify the authentication rule used for user authentication.
     'USER_AUTHENTICATION_RULE': 'rest_framework_simplejwt.authentication.default_user_authentication_rule',
 
+    # Specify the token classes used for authentication.
     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
+
+    # Specify the claim used to store the token type.
     'TOKEN_TYPE_CLAIM': 'token_type',
+
+    # Specify the user class used for token creation.
     'TOKEN_USER_CLASS': 'rest_framework_simplejwt.models.TokenUser',
 
+    # Specify the claim used to store the JSON Web Token ID.
     'JTI_CLAIM': 'jti',
 }
