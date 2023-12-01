@@ -474,7 +474,7 @@
 			"response": []
 		},
 		{
-			"name": "admin login",
+			"name": "Admin Tokens",
 			"request": {
 				"method": "POST",
 				"header": [],

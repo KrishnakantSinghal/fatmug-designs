@@ -100,3 +100,22 @@ Project set up completed !!
 Now, import the collection file in postman for managing APIs endpoints.
 Collection file is - _fatmug_Designs.postman_collection.json_.
 
+## API Endpoints 
+
+All the APIs are authenticated for the admin users only i.e only admins / superusers can have access to the APIs. After successfully getting the access token, the admin user can perform required operations with the help of APIs.
+
+#### 1. Admin Tokens API (_localhost:8000/api/admin-tokens/_) -
+The first API is to get the tokens for the admin user by entering credentials for admin user. These token will be used to maintain the authenticity of other APIs.
+
+In payload two parameters are required - _username_ and _password_.
+After hitting the API, it will give access and refresh tokens.
+
+(![Alt text](screenshots/admin-login.png))
+
+After Getting tokens, copy access token and paste it to Authorization of type Bearer Token -
+
+(![Alt text](screenshots/bearer_token.png))
+
+Now Your APIs will be authenticated.
+
+#### 2. Create Vendor API (_localhost:8000/api/vendors/_) -
