@@ -14,7 +14,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDk2MDc1LCJpYXQiOjE3MDE0MDkzMDMsImp0aSI6IjI5Nzk4NjVhN2I4MjRiNzc5ZjNjY2ZhNjNmYjI5NmQyIiwidXNlcl9pZCI6MX0.Vx60MooGlWhH5idg7_rycnTCJKODqvQRmI57Y7YlsSI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
 							"type": "string"
 						}
 					]
@@ -67,7 +67,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDk2MDc1LCJpYXQiOjE3MDE0MDkzMDMsImp0aSI6IjI5Nzk4NjVhN2I4MjRiNzc5ZjNjY2ZhNjNmYjI5NmQyIiwidXNlcl9pZCI6MX0.Vx60MooGlWhH5idg7_rycnTCJKODqvQRmI57Y7YlsSI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
 							"type": "string"
 						}
 					]
@@ -93,6 +93,39 @@
 			"response": []
 		},
 		{
+			"name": "Single Vendor Details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/vendors/1",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"vendors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Update Vendor Details",
 			"request": {
 				"auth": {
@@ -100,7 +133,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDk2MDc1LCJpYXQiOjE3MDE0MDkzMDMsImp0aSI6IjI5Nzk4NjVhN2I4MjRiNzc5ZjNjY2ZhNjNmYjI5NmQyIiwidXNlcl9pZCI6MX0.Vx60MooGlWhH5idg7_rycnTCJKODqvQRmI57Y7YlsSI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
 							"type": "string"
 						}
 					]
@@ -154,7 +187,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDk2MDc1LCJpYXQiOjE3MDE0MDkzMDMsImp0aSI6IjI5Nzk4NjVhN2I4MjRiNzc5ZjNjY2ZhNjNmYjI5NmQyIiwidXNlcl9pZCI6MX0.Vx60MooGlWhH5idg7_rycnTCJKODqvQRmI57Y7YlsSI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
 							"type": "string"
 						}
 					]
@@ -162,7 +195,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/vendors/3/",
+					"raw": "127.0.0.1:8000/api/vendors/2/",
 					"host": [
 						"127",
 						"0",
@@ -173,7 +206,7 @@
 					"path": [
 						"api",
 						"vendors",
-						"3",
+						"2",
 						""
 					]
 				}
@@ -188,7 +221,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDk2MDc1LCJpYXQiOjE3MDE0MDkzMDMsImp0aSI6IjI5Nzk4NjVhN2I4MjRiNzc5ZjNjY2ZhNjNmYjI5NmQyIiwidXNlcl9pZCI6MX0.Vx60MooGlWhH5idg7_rycnTCJKODqvQRmI57Y7YlsSI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
 							"type": "string"
 						}
 					]
@@ -197,7 +230,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"vendor\": 1,\n    \"delivery_date\": \"2023-11-17T15:30:00Z\",\n    \"order_date\": \"2023-11-30T00:30:00Z\",\n    \"items\": \n    [\n        {\n        \"name\": \"Item 1\",\n        \"quantity\": 3\n        },\n        {\n        \"name\": \"Item 2\",\n        \"quantity\": 5\n        },\n        {\n        \"name\": \"Item 3\",\n        \"quantity\": 2\n        }\n    ],\n    \"quality_rating\": 7,\n    \"status\": \"complete\"\n}",
+					"raw": "{\n    \"vendor\": 5,\n    \"delivery_date\": \"2023-11-17T15:30:00Z\",\n    \"order_date\": \"2023-11-30T00:30:00Z\",\n    \"items\": \n    [\n        {\n        \"name\": \"Item 1\",\n        \"quantity\": 3\n        },\n        {\n        \"name\": \"Item 2\",\n        \"quantity\": 5\n        },\n        {\n        \"name\": \"Item 3\",\n        \"quantity\": 2\n        }\n    ],\n    \"quality_rating\": 7,\n    \"status\": \"complete\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -230,7 +263,39 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDk2MDc1LCJpYXQiOjE3MDE0MDkzMDMsImp0aSI6IjI5Nzk4NjVhN2I4MjRiNzc5ZjNjY2ZhNjNmYjI5NmQyIiwidXNlcl9pZCI6MX0.Vx60MooGlWhH5idg7_rycnTCJKODqvQRmI57Y7YlsSI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/api/purchase_orders",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"purchase_orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Purchase Orders for a Vendor",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
 							"type": "string"
 						}
 					]
@@ -262,14 +327,14 @@
 			"response": []
 		},
 		{
-			"name": "Retreive Purchase Order details for particular puchase ID",
+			"name": "Retrieve Purchase Order details for a particular purchase_id",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDk2MDc1LCJpYXQiOjE3MDE0MDkzMDMsImp0aSI6IjI5Nzk4NjVhN2I4MjRiNzc5ZjNjY2ZhNjNmYjI5NmQyIiwidXNlcl9pZCI6MX0.Vx60MooGlWhH5idg7_rycnTCJKODqvQRmI57Y7YlsSI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
 							"type": "string"
 						}
 					]
@@ -277,7 +342,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/purchase_orders/1",
+					"raw": "127.0.0.1:8000/api/purchase_orders/3",
 					"host": [
 						"127",
 						"0",
@@ -288,7 +353,7 @@
 					"path": [
 						"api",
 						"purchase_orders",
-						"1"
+						"3"
 					]
 				}
 			},
@@ -302,7 +367,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDk2MDc1LCJpYXQiOjE3MDE0MDkzMDMsImp0aSI6IjI5Nzk4NjVhN2I4MjRiNzc5ZjNjY2ZhNjNmYjI5NmQyIiwidXNlcl9pZCI6MX0.Vx60MooGlWhH5idg7_rycnTCJKODqvQRmI57Y7YlsSI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
 							"type": "string"
 						}
 					]
@@ -319,7 +384,7 @@
 					}
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/purchase_orders/1/",
+					"raw": "127.0.0.1:8000/api/purchase_orders/4/",
 					"host": [
 						"127",
 						"0",
@@ -330,41 +395,8 @@
 					"path": [
 						"api",
 						"purchase_orders",
-						"1",
+						"4",
 						""
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Get Details of one Vendor",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDk2MDc1LCJpYXQiOjE3MDE0MDkzMDMsImp0aSI6IjI5Nzk4NjVhN2I4MjRiNzc5ZjNjY2ZhNjNmYjI5NmQyIiwidXNlcl9pZCI6MX0.Vx60MooGlWhH5idg7_rycnTCJKODqvQRmI57Y7YlsSI",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "127.0.0.1:8000/api/vendors/1",
-					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
-					],
-					"port": "8000",
-					"path": [
-						"api",
-						"vendors",
-						"1"
 					]
 				}
 			},
@@ -378,7 +410,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDk2MDc1LCJpYXQiOjE3MDE0MDkzMDMsImp0aSI6IjI5Nzk4NjVhN2I4MjRiNzc5ZjNjY2ZhNjNmYjI5NmQyIiwidXNlcl9pZCI6MX0.Vx60MooGlWhH5idg7_rycnTCJKODqvQRmI57Y7YlsSI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
 							"type": "string"
 						}
 					]
@@ -386,7 +418,7 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/purchase_orders/2/",
+					"raw": "127.0.0.1:8000/api/purchase_orders/4/",
 					"host": [
 						"127",
 						"0",
@@ -397,7 +429,7 @@
 					"path": [
 						"api",
 						"purchase_orders",
-						"2",
+						"4",
 						""
 					]
 				}
@@ -412,7 +444,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDk2MDc1LCJpYXQiOjE3MDE0MDkzMDMsImp0aSI6IjI5Nzk4NjVhN2I4MjRiNzc5ZjNjY2ZhNjNmYjI5NmQyIiwidXNlcl9pZCI6MX0.Vx60MooGlWhH5idg7_rycnTCJKODqvQRmI57Y7YlsSI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
 							"type": "string"
 						}
 					]
@@ -439,14 +471,14 @@
 			"response": []
 		},
 		{
-			"name": "Update Acknowledgement ",
+			"name": "Update Acknowledgement",
 			"request": {
 				"auth": {
 					"type": "bearer",
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNDk2MDc1LCJpYXQiOjE3MDE0MDkzMDMsImp0aSI6IjI5Nzk4NjVhN2I4MjRiNzc5ZjNjY2ZhNjNmYjI5NmQyIiwidXNlcl9pZCI6MX0.Vx60MooGlWhH5idg7_rycnTCJKODqvQRmI57Y7YlsSI",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzAxNzU0Njc4LCJpYXQiOjE3MDE2NjgyNzgsImp0aSI6IjVjZWQ5YjBiOWE1ZjQxM2VhYzlhNDcyZmYzM2FjMmY0IiwidXNlcl9pZCI6Mn0.2mwAJxZ6kD_aijC1DVSPXZbONz1i1IZrjYb28qdTiVw",
 							"type": "string"
 						}
 					]
@@ -454,7 +486,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000//api/purchase_orders/1/acknowledge",
+					"raw": "127.0.0.1:8000/api/purchase_orders/4/acknowledge",
 					"host": [
 						"127",
 						"0",
@@ -463,10 +495,9 @@
 					],
 					"port": "8000",
 					"path": [
-						"",
 						"api",
 						"purchase_orders",
-						"1",
+						"4",
 						"acknowledge"
 					]
 				}
@@ -483,12 +514,12 @@
 					"formdata": [
 						{
 							"key": "username",
-							"value": "krishna",
+							"value": "admin",
 							"type": "text"
 						},
 						{
 							"key": "password",
-							"value": "1234",
+							"value": "admin",
 							"type": "text"
 						}
 					]
@@ -521,7 +552,7 @@
 					"formdata": [
 						{
 							"key": "refresh",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwMTU4MjEwMywiaWF0IjoxNzAxNDA5MzAzLCJqdGkiOiI3MDA2MmJmZjY3NGY0ZmNhOGFjODIyZjU4Zjk5YzlmYyIsInVzZXJfaWQiOjF9.UO-VYeFEZoo3Avai5dPcKNnmRDsNRHF5WthMt9ceHAs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcwMTg0MTA3OCwiaWF0IjoxNzAxNjY4Mjc4LCJqdGkiOiIzMWJiMTcwZjUzNmU0MDVjOTFmN2MzYjNlNjgzZGUyZiIsInVzZXJfaWQiOjJ9.Y6VLysViRI_VZJdtXmHe6oyWTlq1ZhZemhJAf-ZxxA4",
 							"type": "text"
 						}
 					]
