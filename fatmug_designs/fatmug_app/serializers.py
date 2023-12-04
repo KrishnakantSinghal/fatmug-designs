@@ -35,7 +35,8 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
             dict: A dictionary containing the access and refresh tokens.
         """
         token = super().get_token(user)
-
+        user.last_login = timezone.now()
+        user.save()
         return {
             'refresh': str(token),
             'access': str(token.access_token),

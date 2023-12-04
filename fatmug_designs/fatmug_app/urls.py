@@ -1,6 +1,6 @@
 # urls.py
 
-from django.urls import path
+from django.urls import path, re_path
 from .views import (
     AdminTokensView,
     VendorAPIView,
@@ -18,12 +18,10 @@ urlpatterns = [
     path('admin_refresh_token/', TokenRefreshView.as_view(), name="admin-refresh-token"),
 
     # Endpoints for managing vendors.
-    path('vendors/', VendorAPIView.as_view(), name="vendor_list"),
-    path('vendors/<int:vendor_id>/', VendorAPIView.as_view(), name="vendor"),
+    re_path('vendors/(?P<vendor_id>[^/]*)/?$', VendorAPIView.as_view(), name="vendor"),
     path("vendors/<int:vendor_id>/performance", PerformanceMetricsView.as_view(), name="vendor-performance"),
 
     # Endpoints for managing purchase orders.
-    path('purchase_orders/', PurchaseOrderView.as_view(), name="purchase-order"),
-    path('purchase_orders/<int:po_id>/', PurchaseOrderView.as_view(), name="purchase-order"),
+    re_path('^purchase_orders/(?P<po_id>[^/]*)/?$', PurchaseOrderView.as_view(), name="purchase-order"),
     path("purchase_orders/<int:po_id>/acknowledge", AcknowledgePOView.as_view(), name="update-acknowledgement"),
 ]

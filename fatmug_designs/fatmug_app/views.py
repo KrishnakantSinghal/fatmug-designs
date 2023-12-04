@@ -229,7 +229,7 @@ class PurchaseOrderView(generics.GenericAPIView):
             if serializer.is_valid(raise_exception=True):
                 # If validation is successful, save the Purchase Order instance and return a success response.
                 serializer.save()
-                return Response({"message": "Purchase Order Created Successfully"})
+                return Response({"message": "Purchase Order Created Successfully"}, status=status.HTTP_201_CREATED)
 
         except Exception as e:
             # Handle any exceptions that may occur during the creation process and return an error response.
@@ -311,7 +311,7 @@ class PurchaseOrderView(generics.GenericAPIView):
             purchase_order.delete()
             
             # Return a success response indicating the successful deletion.
-            return Response({"message": "Purchase Order Successfully Deleted"}, status=status.HTTP_204_NO_CONTENT)
+            return Response({"message": "Purchase Order Successfully Deleted"}, status=status.HTTP_200_OK)
         
         except Exception as e:
             # Handle any exceptions that may occur during the deletion process and return an error response.
