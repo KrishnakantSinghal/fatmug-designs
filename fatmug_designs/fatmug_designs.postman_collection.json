@@ -42,12 +42,9 @@
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/vendors/",
+					"raw": "localhost:8000/api/vendors/",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
@@ -75,12 +72,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/vendors/",
+					"raw": "localhost:8000/api/vendors/",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
@@ -108,12 +102,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/vendors/1",
+					"raw": "localhost:8000/api/vendors/1",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
@@ -161,18 +152,15 @@
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/vendors/2/",
+					"raw": "localhost:8000/api/vendors/1/",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
 						"api",
 						"vendors",
-						"2",
+						"1",
 						""
 					]
 				}
@@ -195,18 +183,15 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/vendors/2/",
+					"raw": "localhost:8000/api/vendors/7/",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
 						"api",
 						"vendors",
-						"2",
+						"7",
 						""
 					]
 				}
@@ -238,12 +223,9 @@
 					}
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/purchase_orders/",
+					"raw": "localhost:8000/api/purchase_orders/",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
@@ -271,12 +253,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/purchase_orders",
+					"raw": "localhost:8000/api/purchase_orders",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
@@ -303,12 +282,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/purchase_orders/?vendor_id=1",
+					"raw": "localhost:8000/api/purchase_orders/?vendor_id=1",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
@@ -342,18 +318,15 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/purchase_orders/3",
+					"raw": "localhost:8000/api/purchase_orders/6",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
 						"api",
 						"purchase_orders",
-						"3"
+						"6"
 					]
 				}
 			},
@@ -384,18 +357,15 @@
 					}
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/purchase_orders/4/",
+					"raw": "localhost:8000/api/purchase_orders/5/",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
 						"api",
 						"purchase_orders",
-						"4",
+						"5",
 						""
 					]
 				}
@@ -418,18 +388,15 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/purchase_orders/4/",
+					"raw": "localhost:8000/api/purchase_orders/5/",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
 						"api",
 						"purchase_orders",
-						"4",
+						"5",
 						""
 					]
 				}
@@ -452,12 +419,9 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/vendors/1/performance",
+					"raw": "localhost:8000/api/vendors/1/performance",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
@@ -486,12 +450,9 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "127.0.0.1:8000/api/purchase_orders/4/acknowledge",
+					"raw": "localhost:8000/api/purchase_orders/4/acknowledge",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
@@ -525,12 +486,9 @@
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/admin-tokens/",
+					"raw": "localhost:8000/api/admin-tokens/",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
@@ -558,12 +516,9 @@
 					]
 				},
 				"url": {
-					"raw": "127.0.0.1:8000/api/admin_refresh_token/",
+					"raw": "localhost:8000/api/admin_refresh_token/",
 					"host": [
-						"127",
-						"0",
-						"0",
-						"1"
+						"localhost"
 					],
 					"port": "8000",
 					"path": [
